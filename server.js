@@ -277,8 +277,8 @@ app.post("/payment", verifyUser, async (req, res) => {
         },
       ],
       mode: "payment",
-      success_url: `http://localhost:3000/account/your-orders/success/${orderId}/${id}/${quantity}`,
-      cancel_url: `http://localhost:3000/account/your-orders/failed/${orderId}`,
+      success_url: `http://trez-reiine.netlify.app/account/your-orders/success/${orderId}/${id}/${quantity}`,
+      cancel_url: `http://trez-reiine.netlify.app/account/your-orders/failed/${orderId}`,
     });
     res.json({ sessionUrl: session.url });
   } catch (error) {
