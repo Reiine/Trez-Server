@@ -12,7 +12,7 @@ const yourOrderedItem = require("./models/your-orders");
 const app = express();
 app.use(
   cors({
-    origin: [ "https://checkout.stripe.com"],
+    origin: ["https://trez-server.onrender.com", "https://checkout.stripe.com"],
     credentials: true,
   })
 );
