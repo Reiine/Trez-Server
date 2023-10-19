@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
-
+const dotEnv = require("dotenv");
+dotEnv.config();
 mongoose
   .connect('mongodb://127.0.0.1:27017/trezData')
   .then(() => {
