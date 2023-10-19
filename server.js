@@ -10,12 +10,7 @@ const crypto = require("crypto");
 const userComment = require("./models/comments");
 const yourOrderedItem = require("./models/your-orders");
 const app = express();
-app.use(
-  cors({
-    origin: ["https://trez-server.onrender.com", "https://checkout.stripe.com"],
-    credentials: true,
-  })
-);
+app.use(cors());
 const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
